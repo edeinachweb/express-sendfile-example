@@ -83,3 +83,7 @@
             .acceta-label {
                 padding-top: 10px;
             }
+            
+            .card-body {
+                padding: 20px !important;
+            }
