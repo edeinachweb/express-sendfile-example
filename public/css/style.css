@@ -1,6 +1,85 @@
-.mail {
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    display: block;
-}
+            .mail {
+                position: absolute;
+                top: 40%;
+                left: 40%;
+                display: block;
+            }
+            
+            form {
+                max-width: 900px;
+                display: block;
+                margin: 0 auto;
+            }
+            
+            .col-6.input-codice {
+                margin-top: 10px;
+            }
+            
+            .row.input-codice {
+                margin-top: 10px;
+            }
+            
+            .checkbox-type {
+                padding: 30px 30px;
+                display: block;
+            }
+            
+            .col-6 {
+                width: 100% !important;
+            }
+            
+            .btn-primary {
+                margin: 10px 0 20px;
+            }
+            
+            .form-group {
+                margin-top: 10px;
+            }
+            
+            .container-checkbox {
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+                margin-right: auto;
+                position: absolute;
+                transform: translate(0, -50%);
+                top: 5%;
+                left: 40%;
+            }
+            
+            .title-form {
+                font-size: 21px;
+            }
+            
+            .gradient-custom-3 {
+                /* fallback for old browsers */
+                background: #84fab0;
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
+            }
+            
+            .gradient-custom-4 {
+                /* fallback for old browsers */
+                background: #84fab0;
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+            }
+            
+            .container-radio a {
+                text-decoration: none !important;
+                font-size: 18px;
+                color: #336600;
+                margin: 5px;
+            }
+            
+            .container.container-radio {
+                text-align: center;
+            }
+            
+            .acceta-label {
+                padding-top: 10px;
+            }

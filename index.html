@@ -9,64 +9,111 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
     <script src="javascript.js"></script>
 
 </head>
 
 <body>
-    <div class="mail" id="greating">
-        <h2>Input your time and submit</h2>
-        <form name="form1" action="#" class="input-form">
-            <input id="input001" type="number" min="1" step="1" onkeypress="return event.keyCode === 8 || event.charCode >= 48 && event.charCode <= 57">
-            <!-- Button trigger modal -->
-            <button onclick="btn001()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Submit
-            </button>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p id="message001"></p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+    <div class="container container-checkbox">
+
+        <!-- <label for="chkPersona" class="checkbox-type">
+            <input type="checkbox" id="chkPerson" /> Persona Fisica
+            </label>
+        <div>
+            <label for="chkAzieda" class="checkbox-type">
+            <input type="checkbox" id="chkAzienda" onclick="showAzienda()" />
+            Azienda
+         </div> -->
+
+
+    </div>
+    <section class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+            <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body p-5">
+                                <h2 class="text-uppercase text-center mb-5">Crea un account</h2>
+
+                                <form>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                                        <label class="form-label" required="required" for="form3Example1cg">Nome</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                                        <label class="form-label" required="required" for="form3Example3cg"> Email</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                                        <label class="form-label" required="required" for="form3Example4cg">Password</label>
+                                    </div>
+                                    <div class="container container-radio">
+                                        <a href="persona.html" target="_blank">
+                                            <input type="radio" style="pointer-events:none;" id="chkPerson"> Persona Fisica
+                                        </a>
+                                        <a href="azienda.html" target="_blank">
+                                            <input type="radio" style="pointer-events:none;" type="checkbox" id="chkAzienda" onclick="showAzienda()"> Azienda
+                                        </a>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-center mb-5 acceta-label">
+                                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
+                                        <label class="form-check-label " for="form2Example3g">
+                                            Accetto tutte le affermazioni in <a href="#!" class="text-body"><u>Termini di condizioni</u></a>
+                        </label>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                                    </div>
+                                    <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!" class="fw-bold text-body"><u>Login here</u></a></p>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </form>
-    </div>
-
-
+        </div>
+    </section>
     <script>
-        function btn001() {
+        $(function() {
+            $("#chkPerson").click(function() {
+                if ($(this).is(":checked")) {
+                    $("#dvPerson").show();
+                    $("#dvPerson").hide();
+                } else {
+                    $("#dvPerson").hide();
+                    $("#dvPerson").show();
+                }
+            });
+        });
 
-            var greet;
-            var number001 = input001.value;
-            if (number001 >= 1 && number001 < 12) {
-                greet = 'Buongiorno';
-                document.getElementById("message001").innerHTML = greet;
+        /*   function showPersonaFisica() {
+            var checkBox = document.getElementById("chkPersona");
+            var person = document.getElementById("person");
+            if (checkBox.checked == true) {
+                person.style.display = "block";
+            } else {
+                person.style.display = "none";
             }
-            if (number001 >= 12 && number001 <= 16) {
-                greet = 'Buon Pomeriggio';
-                document.getElementById("message001").innerHTML = greet;
-            }
-            if (number001 > 16 && number001 <= 20) {
-                greet = 'Buona Sera';
-                document.getElementById("message001").innerHTML = greet;
-            }
-            if (number001 > 20 && number001 <= 24) {
-                greet = 'Buona Notte';
-                document.getElementById("message001").innerHTML = greet;
+        }  */
+
+        function showAzienda() {
+            var checkBox = document.getElementById("chkAzienda");
+            var azienda = document.getElementById("azienda");
+            if (checkBox.checked == true) {
+                azienda.style.display = "block";
+            } else {
+                azienda.style.display = "none";
             }
         }
     </script>
-
-
 </body>
-
 
 </html>
